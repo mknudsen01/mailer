@@ -4,7 +4,6 @@ require 'mandrill'
 Dotenv.load
 
 post '/' do
-  p params
   email_data = params
   m = Mandrill::API.new ENV['MANDRILL_APIKEY']
   message = {
